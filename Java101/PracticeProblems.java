@@ -40,25 +40,53 @@ public class PracticeProblems {
 
 //problem 3
 public class PracticeProblems {
-    public static void main(String[] args) {
-        double[][] grid = {
-            {7,  3,  4}, 
-            {9,  2,  6}, 
-            {4,  1,  2}
-        };
-
-        double total = sumGrid(grid);
-        System.out.println(total);
-    }
-
     public static double sumGrid(double[][] grid) {
-        double sum = 0.0;
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[i].length; j++) {
+           double sum = 0.0;
+           for (int i = 0; i < grid.length; i++) {
+           for (int j=0; j < grid[i].length; j++) {
                 sum += grid[i][j];
-            }
+               }
+           }
+
+           return sum;
+       }
+   
+   
+   public static void main(String[] args) {
+       double[][] grid = {
+           {7, 3, 4},
+           {9, 2, 6},
+           {4, 1, 2}
+       };
+
+       double total = sumGrid(grid);
+       System.out.println(total);
+       
+       
+      
+   } 
+}
+
+//problem 4
+public class PracticeProblems {
+
+    public static int fib(int[] arr) {
+        if (n<=1) {
+            return n;
         }
 
-        return sum;
+        int x = 0;
+        int y = 1;
+
+        for (int i=2; i <= n; i++) {
+            int z = x + y;
+            x=y;
+            y=z;
+        }
+        return y;
+
+    }
+    public static void main(String[] args) {
+       System.out.println (fib(n));
     }
 }
